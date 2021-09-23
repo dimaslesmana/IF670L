@@ -1,6 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
-const Spam: React.FC = () => {
+const Settings: React.FC = () => {
 
   return (
     <IonPage>
@@ -20,4 +20,4 @@ const Spam: React.FC = () => {
   );
 };
 
-export default Spam;
+export default Settings;
