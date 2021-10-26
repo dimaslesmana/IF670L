@@ -1,0 +1,6 @@
+{
+	"appId": "id.ac.umn.dimaslesmana.ionic.memories",
+	"appName": "Memories",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
