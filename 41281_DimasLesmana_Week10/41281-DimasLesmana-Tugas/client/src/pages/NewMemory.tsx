@@ -22,7 +22,6 @@ import {
 } from '@ionic/react';
 import { camera } from 'ionicons/icons';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
-import { Directory, Filesystem } from '@capacitor/filesystem';
 import { base64FromPath } from '@capacitor-community/filesystem-react';
 import { Geolocation } from '@capacitor/geolocation';
 
@@ -90,16 +89,10 @@ const NewMemory: React.FC = () => {
       return;
     }
 
-    const fileName = new Date().getTime() + '.jpeg';
     const base64 = await base64FromPath(takenPhoto!.preview);
+    const photoBlob = base64.split(',')[1];
 
-    await Filesystem.writeFile({
-      path: fileName,
-      data: base64,
-      directory: Directory.Data,
-    });
-
-    memoriesCtx.addMemory(fileName, base64, enteredTitle.toString(), chosenMemoryType, selectedLocation);
+    memoriesCtx.addMemory(photoBlob, enteredTitle.toString(), chosenMemoryType, selectedLocation);
 
     history.length > 0 ? history.goBack() : history.replace('/tabs/good-memories');
   };

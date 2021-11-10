@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { LoadScript } from '@react-google-maps/api';
 import { IonApp, IonRouterOutlet } from '@ionic/react';

@@ -1,6 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { Directory, Filesystem } from '@capacitor/filesystem';
-import { Storage } from '@capacitor/storage';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import MemoriesContext, { Memory } from "./memories-context";

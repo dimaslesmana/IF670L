@@ -33,6 +33,7 @@ const MemoryItem: React.FC<{ memoryType: 'good' | 'bad' }> = (props) => {
         <IonRow key={memory.id}>
           <IonCol>
             <IonCard>
+              {console.log(memory.location)}
               <img src={`${BASE_URL}/${memory.photo ?? 'uploads/placeholder.png'}`} alt={memory.title} width="100%" />
               <GoogleMap
                 mapContainerStyle={mapContainerStyle}
